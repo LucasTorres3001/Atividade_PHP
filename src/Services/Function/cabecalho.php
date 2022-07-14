@@ -13,6 +13,8 @@
      */
     function cabecalho(string $title): void
     {
+        include 'C:/xampp/htdocs/Folder/src/App/Controllers/acesso.php';
+
         include 'C:/xampp/htdocs/Folder/src/View/pages/layout/header_II.php';
             echo "<title>{$title}</title>";
         include 'C:/xampp/htdocs/Folder/src/View/pages/layout/header.php';

@@ -3,7 +3,6 @@
     use function Src\Services\Function\cabecalho;
 
     include '../../../Services/Function/cabecalho.php';
-    include '../../../App/Controllers/acesso.php';
     include '../../../App/Controllers/WebController/dashboard.php';
     if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
     if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}

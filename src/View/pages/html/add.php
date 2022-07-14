@@ -3,7 +3,6 @@
     use function Src\Services\Function\cabecalho;
 
     include '../../../Services/Function/cabecalho.php';
-    include '../../../App/Controllers/acesso.php';
     if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
 
     cabecalho('Contact add')

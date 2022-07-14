@@ -3,7 +3,6 @@
     use function Src\Services\Function\cabecalho;
 
     include '../../../Services/Function/cabecalho.php';
-    include '../../../App/Controllers/acesso.php';
     include '../../../App/Controllers/WebController/home.php';
 
     cabecalho('User search')
