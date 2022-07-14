@@ -19,6 +19,13 @@
     abstract class Connection
     {
         /**
+         * Data source name (D.S.N.)
+         *
+         * @static
+         * @var string
+         */
+        private static string $dsn;
+        /**
          * Connection driver
          *
          * @static
@@ -73,7 +80,7 @@
             PDO::ATTR_CASE => PDO::CASE_NATURAL
         );
         /**
-         * DSN
+         * D.S.N. method
          *
          * @method string dsn()
          * @static
@@ -81,9 +88,12 @@
          */
         private static function dsn(): string
         {
-            $dsn = self::$driver.':host='.self::$host.';dbname='.self::$dbname.';port='.self::$port;
+            self::$dsn = self::$driver.':
+            host='.self::$host.';
+            dbname='.self::$dbname.';
+            port='.self::$port;
 
-            return $dsn;
+            return self::$dsn;
         }
         /**
          * Database connection method
