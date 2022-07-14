@@ -1,9 +1,14 @@
-<?php session_start();if (isset($_SESSION['insert'])){echo $_SESSION['insert'];unset($_SESSION['insert']);}?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Login</title>
-    <?php include '../layout/others/header.php'?>
+<?php
+
+    use function Src\Services\Function\head;
+
+    session_start();
+
+    include '../../../Services/Function/head.php';
+    if (isset($_SESSION['insert'])){echo $_SESSION['insert'];unset($_SESSION['insert']);}
+    
+    head('Login')
+?>
                 <h1>Login</h1>
             </div>
         </header>

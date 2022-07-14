@@ -49,7 +49,7 @@
                     </tbody>
                 </table>
             <?php else:?>
-                <p>Você ainda não tem eventos, <a href="add.php">Add users</a></p>
+                <p>There are no registered users, <a href="add.php">Add users</a></p>
             <?php endif?>
         </div>
     </section>
