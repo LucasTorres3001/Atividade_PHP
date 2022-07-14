@@ -1,10 +1,14 @@
-<?php include '../../../App/Controllers/acesso.php';include '../../../App/Controllers/WebController/home.php'?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <link rel="stylesheet" href="../../resources/css/style.css">
-        <title>Home</title>
-    <?php include '../layout/header.php'?>
+<?php
+
+    use function Src\Services\Function\cabecalho;
+
+    include '../../../Services/Function/cabecalho.php';
+    include '../../../App/Controllers/acesso.php';
+    include '../../../App/Controllers/WebController/home.php';
+
+    cabecalho('Home')
+?>
+    <link rel="stylesheet" href="../../resources/css/style.css">
     <div id="search-container" class="col-md-12">
         <?php if (isset($_SESSION['insert'])){echo $_SESSION['insert'];}?>
         <form action="search.php" id="form-search" method="GET">

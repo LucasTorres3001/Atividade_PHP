@@ -1,10 +1,14 @@
-<?php include '../../../App/Controllers/acesso.php';include '../../../App/Controllers/UserController/edit.php';
-if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title><?="{$name} {$surname}"?></title>
-    <?php include '../layout/header.php'?>
+<?php
+
+    use function Src\Services\Function\cabecalho;
+
+    include '../../../Services/Function/cabecalho.php';
+    include '../../../App/Controllers/acesso.php';
+    include '../../../App/Controllers/UserController/edit.php';
+    if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}
+
+    cabecalho("{$name} {$surname}")
+?>
     <section>
         <header>
             <h1><?="{$name} {$surname}"?></h1>

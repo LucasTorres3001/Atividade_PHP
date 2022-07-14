@@ -1,9 +1,13 @@
-<?php include '../../../App/Controllers/acesso.php';include '../../../App/Controllers/WebController/home.php'?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>User search</title>
-    <?php include '../layout/header.php'?>
+<?php
+
+    use function Src\Services\Function\cabecalho;
+
+    include '../../../Services/Function/cabecalho.php';
+    include '../../../App/Controllers/acesso.php';
+    include '../../../App/Controllers/WebController/home.php';
+
+    cabecalho('User search')
+?>
     <img src="../../resources/storage/public/img/42573d7391a7bc9dcdef39375562aa088c386c85.jpg" width="100%" class="img-fluid" title="Logo" alt="Logo">
     <div id="events-container" class="col-md-11">
         <br>

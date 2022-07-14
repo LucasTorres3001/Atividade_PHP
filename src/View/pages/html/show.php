@@ -1,9 +1,13 @@
-<?php include '../../../App/Controllers/acesso.php';include '../../../App/Controllers/WebController/show.php'?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title><?="{$name} {$surname}"?></title>
-    <?php include '../layout/header.php'?>
+<?php
+
+    use function Src\Services\Function\cabecalho;
+
+    include '../../../Services/Function/cabecalho.php';
+    include '../../../App/Controllers/acesso.php';
+    include '../../../App/Controllers/WebController/show.php';
+
+    cabecalho("{$name} {$surname}")
+?>
     <div class="col-md-10 offset-md-1">
         <div class="row">
             <div id="image-container" class="col-md-6">

@@ -1,11 +1,15 @@
-<?php include '../../../App/Controllers/acesso.php';include '../../../App/Controllers/WebController/dashboard.php';
-if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
-if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>Dashboard</title>
-    <?php include '../layout/header.php'?>
+<?php
+
+    use function Src\Services\Function\cabecalho;
+
+    include '../../../Services/Function/cabecalho.php';
+    include '../../../App/Controllers/acesso.php';
+    include '../../../App/Controllers/WebController/dashboard.php';
+    if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
+    if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}
+
+    cabecalho('Dashboard')
+?>
     <section>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Users list</h1>
