@@ -66,7 +66,7 @@
                         <label for="am" title="Amerindian">Amerindian</label>
                     
                         <input type="radio" name="addEth" class="check" id="as" title="Asian" value="Asian">
-                        <label for="am" title="Asian">Asian</label>
+                        <label for="as" title="Asian">Asian</label>
                     
                         <input type="radio" name="addEth" class="check" id="bl" title="Black" value="Black">
                         <label for="bl" title="Black">Black</label>

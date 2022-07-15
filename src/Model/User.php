@@ -77,6 +77,33 @@
             return self::$statement;
         }
         /**
+         * Delete users image method
+         *
+         * @method void deleteImage()
+         * @static
+         * @param integer $id_user
+         * @return void
+         */
+        private static function deleteImage(int $id_user): void
+        {
+            $query = "SELECT `image` FROM users WHERE `id_user` = :id";
+            $statement = self::getConnection()->prepare($query);
+            $statement->bindValue(":id", $id_user, PDO::PARAM_INT);
+            $statement->execute();
+            $images = $statement->fetchAll(
+                PDO::FETCH_ASSOC
+            );
+            if ($statement->rowCount() != 0)
+            {
+                foreach ($images as $img)
+                {
+                    $imageName = $img['image'];
+
+                    unlink("C:/xampp/htdocs/Folder/src/View/resources/storage/public/img/{$imageName}");
+                }
+            }
+        }
+        /**
          * Delete method
          *
          * @method PDOStatement|false delete()
@@ -86,6 +113,7 @@
          */
         public static function delete(Users $users): PDOStatement|false
         {
+            self::deleteImage($users::getIdUser());
             self::$query = "DELETE FROM users WHERE `id_user` = :id";
             self::$statement = self::getConnection()->prepare(self::$query);
             self::$statement->bindValue(":id", $users::getIdUser(), PDO::PARAM_INT);
