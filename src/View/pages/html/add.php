@@ -3,7 +3,6 @@
     use function Src\Services\Function\cabecalho;
 
     include '../../../Services/Function/cabecalho.php';
-    if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
 
     cabecalho('Contact add')
 ?>
@@ -14,6 +13,7 @@
             </div>
         </header>
         <div id="event-create-container" class="col-md-6 offset-md-3">
+            <?php if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}?>
             <form action="../../../App/Controllers/UserController/add.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col">

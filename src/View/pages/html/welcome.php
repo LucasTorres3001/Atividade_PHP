@@ -9,10 +9,12 @@
 ?>
     <link rel="stylesheet" href="../../resources/css/style.css">
     <div id="search-container" class="col-md-12">
-        <?php if (isset($_SESSION['insert'])){echo $_SESSION['insert'];}?>
+        <div class="container">
+            <?php if (isset($_SESSION['insert'])){echo $_SESSION['insert'];}?>
+        </div>
         <form action="search.php" id="form-search" method="GET">
             <div class="box-search">
-                <input type="text" id="search" name="search" class="form-control w-75" placeholder="Search...">
+                <input type="text" id="search" name="search" title="Search" class="form-control w-75" placeholder="Search...">
                 <button class="btn btn-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>

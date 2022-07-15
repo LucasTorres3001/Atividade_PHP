@@ -4,7 +4,6 @@
 
     include '../../../Services/Function/cabecalho.php';
     include '../../../App/Controllers/UserController/edit.php';
-    if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}
 
     cabecalho("{$name} {$surname}")
 ?>
@@ -13,6 +12,7 @@
             <h1><?="{$name} {$surname}"?></h1>
         </header>
         <div id="vacancy-create-container" class="col-md-6 offset-md-3">
+            <?php if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}?>
             <form action="../../../App/Controllers/UserController/update.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" id="id" value="<?=$id?>">
                 <div class="row">

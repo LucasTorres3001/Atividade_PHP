@@ -32,7 +32,7 @@
         }
     } catch (Exception $ex)
     {
-        $_SESSION['msg'] = "<script>alert('{$ex->getMessage()}');</script>";
+        $_SESSION['msg'] = "<span style='color: red;'>{$ex->getMessage()}</span>";
         Redirect::to(
             '../../../View/pages/html/edit'
         );

@@ -5,7 +5,6 @@
     session_start();
 
     include '../../../Services/Function/head.php';
-    if (isset($_SESSION['insert'])){echo $_SESSION['insert'];unset($_SESSION['insert']);}
     
     head('Contact create')
 ?>
@@ -14,6 +13,7 @@
         </header>
         <section>
             <div id="event-create-container" class="col-md-6 offset-md-3">
+                <?php if (isset($_SESSION['insert'])){echo $_SESSION['insert'];unset($_SESSION['insert']);}?>
                 <form action="../../../App/Controllers/UserController/store.php" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col">

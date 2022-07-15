@@ -32,7 +32,7 @@
         }
     } catch (Exception $ex)
     {
-        $_SESSION['insert'] = "<script>alert('{$ex->getMessage()}');</script>";
+        $_SESSION['insert'] = "<span style='color: red;'>{$ex->getMessage()}</span>";
         Redirect::to(
             '../../../View/pages/html/create'
         );
