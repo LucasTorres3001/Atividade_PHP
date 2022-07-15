@@ -19,20 +19,20 @@
         $user = User::update($users);
         if ($user->rowCount() > 0)
         {
-            $_SESSION['up'] = '<script>alert("Datas successfully updated.");</script>';
+            $_SESSION['msg'] = '<script>alert("Datas successfully updated.");</script>';
             Redirect::to(
                 '../../../View/pages/html/dashboard'
             );
         } else
         {
-            $_SESSION['up'] = '<script>alert("Datas cannot to be updated.");</script>';
+            $_SESSION['msg'] = '<script>alert("Datas cannot to be updated.");</script>';
             Redirect::to(
                 '../../../View/pages/html/dashboard'
             );
         }
     } catch (Exception $ex)
     {
-        $_SESSION['up'] = "<script>alert('{$ex->getMessage()}');</script>";
+        $_SESSION['msg'] = "<script>alert('{$ex->getMessage()}');</script>";
         Redirect::to(
             '../../../View/pages/html/edit'
         );

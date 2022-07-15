@@ -17,13 +17,13 @@
         $user = User::delete($users);
         if ($user->rowCount() > 0)
         {
-            $_SESSION['msg'] = '<script>alert("User successfully deleted.");</script>';
+            $_SESSION['msg'] = '<script>alert("User successfully deleted.")</script>';
             Redirect::to(
                 '../../../View/pages/html/dashboard'
             );
         } else
         {
-            $_SESSION['msg'] = '<script>alert("User cannot to be deleted.");</script>';
+            $_SESSION['msg'] = '<script>alert("User cannot to be deleted.")</script>';
             Redirect::to(
                 '../../../View/pages/html/dashboard'
             );

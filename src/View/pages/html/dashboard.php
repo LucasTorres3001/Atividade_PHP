@@ -4,8 +4,6 @@
 
     include '../../../Services/Function/cabecalho.php';
     include '../../../App/Controllers/WebController/dashboard.php';
-    if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}
-    if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}
 
     cabecalho('Dashboard')
 ?>
@@ -13,6 +11,7 @@
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Users list</h1>
         </div>
+        <?php if (isset($_SESSION['msg'])){echo $_SESSION['msg'];unset($_SESSION['msg']);}?>
         <div class="col-md-10 offset-md-1 dashboard-events-container">
             <?php if (count($users) > 0):?>
                 <table class="table">
