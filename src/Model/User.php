@@ -15,7 +15,7 @@
 
     include 'C:/xampp/htdocs/Folder/vendor/autoload.php';
     /**
-     * User class
+     * User model
      * 
      * @final
      * @static
@@ -97,9 +97,14 @@
             {
                 foreach ($images as $img)
                 {
-                    $imageName = $img['image'];
+                    if (!empty($img['image']))
+                    {
+                        $imageName = $img['image'];
 
-                    unlink("C:/xampp/htdocs/Folder/src/View/resources/storage/public/img/{$imageName}");
+                        unlink(
+                            "C:/xampp/htdocs/Folder/src/View/resources/storage/public/img/{$imageName}"
+                        );
+                    }
                 }
             }
         }
