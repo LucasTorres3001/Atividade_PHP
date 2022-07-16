@@ -1,8 +1,10 @@
 {
-    "name": "lucas/mvc_test",
-    "description": "MVC Project",
+    "name": "lucas_torres/crud_test",
+    "description": "CRUD Project",
     "license": "MIT",
     "type": "test",
+    "time": "2022-07-16",
+    "require": {},
     "autoload": {
         "psr-4": {
             "Src\\": "src/"
