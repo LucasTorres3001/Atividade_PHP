@@ -9,7 +9,9 @@
 ?>
     <section>
         <header>
-            <h1><?="{$name} {$surname}"?></h1>
+            <div class="container">
+                <h1><?="{$name} {$surname}"?></h1>
+            </div>
         </header>
         <div id="vacancy-create-container" class="col-md-6 offset-md-3">
             <?php if (isset($_SESSION['up'])){echo $_SESSION['up'];unset($_SESSION['up']);}?>
